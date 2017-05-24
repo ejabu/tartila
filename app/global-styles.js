@@ -1,7 +1,14 @@
 import { injectGlobal } from 'styled-components';
+import myFont from './Roboto-Regular.ttf';
 
 /* eslint no-unused-expressions: 0 */
-injectGlobal`
+injectGlobal `
+  @font-face {
+    font-family: 'Roboto';
+    src: url(${myFont}) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
   html,
   body {
     height: 100%;
@@ -9,11 +16,11 @@ injectGlobal`
   }
 
   body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif;
   }
 
   body.fontLoaded {
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
 
   #app {

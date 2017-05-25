@@ -14,7 +14,9 @@ const Eja2 = styled(Section)`
   background-color: blue;
 `;
 
-export default Eja;
+//
+const s = {Eja, Eja2}
+export default s;
 //
 // export {
 //   Eja,

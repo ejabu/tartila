@@ -15,6 +15,7 @@ import H2 from 'components/H2';
 import ReposList from 'components/ReposList';
 import AtPrefix from './AtPrefix';
 import CenteredSection from './CenteredSection';
+import Eja from './style';
 import Form from './Form';
 import Input from './Input';
 import Section from './Section';
@@ -22,7 +23,10 @@ import messages from './messages';
 import { loadRepos } from '../App/actions';
 import { changeUsername } from './actions';
 import { makeSelectUsername } from './selectors';
-import Eja from './style';
+
+import styled from 'styled-components';
+
+
 
 export class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   /**
@@ -42,21 +46,29 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
       repos,
     };
 
+    if (true) {
+      var TomatoButton = styled(H2)`
+        color: yellow;
+      `;
+    }
+
     return (
       <article>
         <Helmet
           title="Home Page"
           meta={[
-            { name: 'description', content: 'A React.js Boilerplate application homepage' },
+            { name: 'description', content: 'Learn Tajweed in Small Steps' },
           ]}
         />
         <div>
           <CenteredSection>
             <Eja>
-              <FormattedMessage {...messages.startProjectHeader} />
+وَخَٰلَٰتُكُمۡ
+            </Eja>
+            <Eja>
+وَخَٰلَٰتُكُمۡ
             </Eja>
             <p>
-              <FormattedMessage {...messages.startProjectMessage} />
             </p>
           </CenteredSection>
           <Section>
@@ -92,7 +104,7 @@ HomePage.propTypes = {
     React.PropTypes.object,
     React.PropTypes.bool,
   ]),
-  repos: React.PropTypes.oneOfType([
+  repos: React.PropTypes.oneOfType([,
     React.PropTypes.array,
     React.PropTypes.bool,
   ]),

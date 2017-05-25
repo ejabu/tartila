@@ -26,7 +26,8 @@ const Title = styled.div`
   color: #5FAA3E;
 
   &:before {
-    content: 'A '
+    content: 'A';
+    margin-right: 10px;
     font-family: "AysaarIcon";
   }
 `;

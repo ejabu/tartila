@@ -13,12 +13,34 @@ const Eja2 = styled(Section)`
   color: red;
   background-color: blue;
 `;
+const Icon = styled.div`
+  color: blue;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "AysaarIcon";
+`;
+const Title = styled.div`
+  padding: 15px 15px;
+  text-align: left;
+  font-size: 18px;
+  color: #5FAA3E;
 
-//
-const s = {Eja, Eja2}
+  &:before {
+    content: 'A '
+    font-family: "AysaarIcon";
+  }
+`;
+
+const Arabic = styled.div`
+  padding: 15px 15px;
+  text-align: right;
+  direction: rtl;
+  font-size: 52px;
+  color: #3c3c3c;
+  font-family: "Uthmanic";
+`;
+
+
+
+const s = {Eja, Eja2, Arabic, Title}
 export default s;
-//
-// export {
-//   Eja,
-//   Eja2,
-// };

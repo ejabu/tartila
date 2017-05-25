@@ -62,12 +62,12 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
         />
         <div>
           <CenteredSection>
-            <s.Eja>
+          <s.Title>
+            Qs An Nuur [24] : 3
+          </s.Title>
+            <s.Arabic>
 وَخَٰلَٰتُكُمۡ
-            </s.Eja>
-            <s.Eja>
-وَخَٰلَٰتُكُمۡ
-            </s.Eja>
+            </s.Arabic>
             <p>
             </p>
           </CenteredSection>

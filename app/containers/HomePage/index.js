@@ -62,22 +62,78 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
         />
         <div>
           <s.Header>
-            Tartila
+            TARTILA
           </s.Header>
 
           <CenteredSection>
+            <s.Post>
+              <s.Left>
+                <s.Level>
+                  a
+                </s.Level>
 
-              <s.Arabic>
-                  وَخَٰلَٰتُكُمۡ
-              </s.Arabic>
-              <s.Title>
-                Qs An Nuur [24] : 3
-              </s.Title>
+              </s.Left>
+              <s.Right>
+                <s.Materi>
+                  Mad
+                </s.Materi>
+                <s.Sub>
+                  Bacaan panjang
+                </s.Sub>
+                <s.Arabic>
+                    وَخَٰلَٰتُكُمۡ
+                </s.Arabic>
+                <s.PostFooter>
+                  <s.More>
+                  </s.More>
+                  <s.Like>
+                  </s.Like>
+                  <s.Play>
+                  </s.Play>
+                </s.PostFooter>
+                <s.Title>
+                  Qs An Nuur [24] : 3
+                </s.Title>
+
+              </s.Right>
+
+            </s.Post>
+            <s.Post>
+              <s.Left>
+                <s.Level>
+                  a
+                </s.Level>
+
+              </s.Left>
+              <s.Right>
+                <s.Materi>
+                  Mad
+                </s.Materi>
+                <s.Sub>
+                  Bacaan panjang
+                </s.Sub>
+                <s.Arabic>
+                    وَخَٰلَٰتُكُمۡ
+                </s.Arabic>
+                <s.PostFooter>
+                  <s.More>
+                  </s.More>
+                  <s.Like>
+                  </s.Like>
+                  <s.Play>
+                  </s.Play>
+                </s.PostFooter>
+                <s.Title>
+                  Qs An Nuur [24] : 3
+                </s.Title>
+
+              </s.Right>
+
+            </s.Post>
           </CenteredSection>
           <Section>
 
-            <s.Play>
-            </s.Play>
+
 
           </Section>
         </div>

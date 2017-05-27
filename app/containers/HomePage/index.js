@@ -82,7 +82,7 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
           <s.Player>
           <ReactAudioPlayer
             ref={(element) => { this.rap = element; }}
-            src="http://localhost:5000/01/main.mp3"
+            src={"http://"+process.env.IP_ADDRESS + ":5000/01/main.mp3"}
             // src="http://192.168.2.148:5000/01/main.mp3"
             // src="http://192.168.43.109:5000/01/main.mp3"
             autoPlay

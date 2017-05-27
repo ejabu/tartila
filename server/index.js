@@ -1,5 +1,8 @@
 /* eslint consistent-return:0 */
+const ip = require('ip');
+process.env.IP_ADDRESS = ip.address()
 
+console.log(process.env);
 const express = require('express');
 const logger = require('./logger');
 
@@ -24,7 +27,7 @@ const customHost = argv.host || process.env.HOST;
 const host = customHost || null; // Let http.Server use its default IPv6/4 host
 const prettyHost = customHost || 'localhost';
 
-const port = argv.port || process.env.PORT || 3000;
+const port = argv.port || process.env.PORT || 80;
 
 // Start your app.
 app.listen(port, host, (err) => {

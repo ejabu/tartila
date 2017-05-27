@@ -72,6 +72,7 @@ module.exports = (options) => ({
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+        IP_ADDRESS: JSON.stringify(process.env.IP_ADDRESS),
       },
     }),
     new webpack.NamedModulesPlugin(),

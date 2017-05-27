@@ -26,7 +26,9 @@ import { makeSelectUsername } from './selectors';
 
 import styled from 'styled-components';
 
-
+import ReactAudioPlayer from 'react-audio-player';
+import Headroom from 'react-headroom'
+//...
 
 export class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   /**
@@ -38,6 +40,15 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
     }
   }
 
+
+  onPlay = (event) => {
+    event.stopPropagation();
+    // console.log('onPLAY');
+    // console.log(this.rap.audioEl);
+    // this.rap.audioEl.pause()
+    var myAudio = this.rap.audioEl
+    return myAudio.paused ? myAudio.play() : myAudio.pause();
+  }
   render() {
     const { loading, error, repos } = this.props;
     const reposListProps = {
@@ -61,10 +72,23 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
           ]}
         />
         <div>
-          <s.Header>
-            TARTILA
-          </s.Header>
 
+          <Headroom>
+            <s.Header>
+              TARTILA
+            </s.Header>
+          </Headroom>
+
+          <s.Player>
+          <ReactAudioPlayer
+            ref={(element) => { this.rap = element; }}
+            src="http://localhost:5000/01/main.mp3"
+            // src="http://192.168.2.148:5000/01/main.mp3"
+            // src="http://192.168.43.109:5000/01/main.mp3"
+            autoPlay
+            controls
+          />
+          </s.Player>
           <CenteredSection>
             <s.Post>
               <s.Left>
@@ -88,7 +112,7 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
                   </s.More>
                   <s.Like>
                   </s.Like>
-                  <s.Play>
+                  <s.Play onClick={this.onPlay.bind(this)}>
                   </s.Play>
                 </s.PostFooter>
                 <s.Title>
@@ -113,18 +137,114 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
                   Bacaan panjang
                 </s.Sub>
                 <s.Arabic>
-                    وَخَٰلَٰتُكُمۡ
+                  مَآ أَنزَلۡنَا
                 </s.Arabic>
                 <s.PostFooter>
                   <s.More>
                   </s.More>
                   <s.Like>
                   </s.Like>
-                  <s.Play>
+                  <s.Play onClick={this.onPlay.bind(this)}>
                   </s.Play>
                 </s.PostFooter>
                 <s.Title>
-                  Qs An Nuur [24] : 3
+                  Qs Thahaa [20] : 2
+                </s.Title>
+
+              </s.Right>
+
+            </s.Post>
+            <s.Post>
+              <s.Left>
+                <s.Level>
+                  a
+                </s.Level>
+
+              </s.Left>
+              <s.Right>
+                <s.Materi>
+                  Mad
+                </s.Materi>
+                <s.Sub>
+                  Bacaan panjang
+                </s.Sub>
+                <s.Arabic>
+                  مَآ أَنزَلۡنَا
+                </s.Arabic>
+                <s.PostFooter>
+                  <s.More>
+                  </s.More>
+                  <s.Like>
+                  </s.Like>
+                  <s.Play onClick={this.onPlay.bind(this)}>
+                  </s.Play>
+                </s.PostFooter>
+                <s.Title>
+                  Qs Thahaa [20] : 2
+                </s.Title>
+
+              </s.Right>
+
+            </s.Post>
+            <s.Post>
+              <s.Left>
+                <s.Level>
+                  a
+                </s.Level>
+
+              </s.Left>
+              <s.Right>
+                <s.Materi>
+                  Mad
+                </s.Materi>
+                <s.Sub>
+                  Bacaan panjang
+                </s.Sub>
+                <s.Arabic>
+                  مَآ أَنزَلۡنَا
+                </s.Arabic>
+                <s.PostFooter>
+                  <s.More>
+                  </s.More>
+                  <s.Like>
+                  </s.Like>
+                  <s.Play onClick={this.onPlay.bind(this)}>
+                  </s.Play>
+                </s.PostFooter>
+                <s.Title>
+                  Qs Thahaa [20] : 2
+                </s.Title>
+
+              </s.Right>
+
+            </s.Post>
+            <s.Post>
+              <s.Left>
+                <s.Level>
+                  a
+                </s.Level>
+
+              </s.Left>
+              <s.Right>
+                <s.Materi>
+                  Mad
+                </s.Materi>
+                <s.Sub>
+                  Bacaan panjang
+                </s.Sub>
+                <s.Arabic>
+                  مَآ أَنزَلۡنَا
+                </s.Arabic>
+                <s.PostFooter>
+                  <s.More>
+                  </s.More>
+                  <s.Like>
+                  </s.Like>
+                  <s.Play onClick={this.onPlay.bind(this)}>
+                  </s.Play>
+                </s.PostFooter>
+                <s.Title>
+                  Qs Thahaa [20] : 2
                 </s.Title>
 
               </s.Right>

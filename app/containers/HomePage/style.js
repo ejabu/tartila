@@ -23,6 +23,7 @@ const Header = styled.div`
   ${''/* font-size: 21px; */}
   ${''/* font-size: 28px; */}
   font-size: 18px;
+  font-weight: 600;
   border-bottom: 1px solid #efefef;
   color: #F53D4A;
   font-family: "AraHamah1964R";
@@ -139,6 +140,8 @@ const PostFooter = styled.div`
   }
 `;
 
-
-const s = { Like, More, PostFooter, Sub, Materi, Level, Left, Right, Post, Header, Eja, Eja2, Arabic, Title, Play };
+const Player = styled.div`
+  display: none;
+`;
+const s = { Player, Like, More, PostFooter, Sub, Materi, Level, Left, Right, Post, Header, Eja, Eja2, Arabic, Title, Play };
 export default s;

@@ -45,6 +45,8 @@ injectGlobal `
     font-weight: normal;
     font-style: normal;
   }
+  * {
+    box-sizing: border-box; }
 
   html,
   body {

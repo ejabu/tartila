@@ -1,8 +1,7 @@
 /* eslint consistent-return:0 */
 const ip = require('ip');
-process.env.IP_ADDRESS = ip.address()
+process.env.IP_ADDRESS = ip.address();
 
-console.log(process.env);
 const express = require('express');
 const logger = require('./logger');
 

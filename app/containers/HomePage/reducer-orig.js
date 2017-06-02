@@ -14,22 +14,22 @@ import { fromJS } from 'immutable';
 import {
   CHANGE_USERNAME,
 } from './constants';
-//
+
 // The initial state of the App
 const initialState = fromJS({
-  messages: [],
-
+  username: '',
 });
 
-
-
-function chatReducer(state=initialState, action=undefined) {
+function homeReducer(state = initialState, action) {
   switch (action.type) {
+    case CHANGE_USERNAME:
 
-    case "FETCH_MESSAGES":
-      return state.update('messages', messages => messages.concat(action.messages));
+      // Delete prefixed '@' from the github username
+      return state
+        .set('username', action.name.replace(/@/gi, ''));
     default:
       return state;
   }
 }
-export default chatReducer;
+
+export default homeReducer;

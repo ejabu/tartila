@@ -55,11 +55,11 @@ injectGlobal `
   }
 
   body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: Arial, sans-serif;
   }
 
   body.fontLoaded {
-    font-family: 'Roboto', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', 'EvilIcons', Arial, sans-serif;
   }
 
   #app {

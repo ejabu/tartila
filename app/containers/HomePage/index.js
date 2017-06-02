@@ -54,13 +54,16 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
   }
 
 
-  onPlay = (event) => {
+  onPlay = (src, event) => {
+    console.log("src", src);
     event.stopPropagation();
     // console.log('onPLAY');
     // console.log(this.rap.audioEl);
     // this.rap.audioEl.pause()
     const myAudio = this.rap.audioEl;
-    return myAudio.paused ? myAudio.play() : myAudio.pause();
+    myAudio.src = src
+    myAudio.play()
+    // return myAudio.paused ? myAudio.play() : myAudio.pause();
   }
 
 
@@ -70,23 +73,66 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
       this.props.onLoadMore()
       // const messages = this._createMessages(this.state.messages, this.state.messages.length+1);
       this.setState( {loadingMore: false})
-    }, 1000)
+    }, 200)
  }
 
- _renderMessages() {
-    console.log("RenderMessages");
-    console.log("this.props.messages");
-    var hasil = this.props.messages.map(function(x){
-      console.log(x);
+ renderMessages() {
+   if (this.props.messages.get(1) == undefined) {
+     return (
+       <div key={1}></div>
+        )
+   }
+    //supaya this nya masuk
+    //stackoverflow.com/questions/30148827/this-is-undefined-inside-map-function-reactjs
+    // var hasil = this.props.messages.map(function(item){
+    const hasil = this.props.messages.map((item, index) => {
       return (
-             <div>{x}</div>
+        <div key={index}>
+        <s.Post >
+          <s.Left>
+            <s.Level>
+              a
+            </s.Level>
+
+          </s.Left>
+          <s.Right>
+            <s.Materi>
+              {item.materi}
+            </s.Materi>
+            <s.Sub>
+              {item.sub}
+            </s.Sub>
+            <s.Arabic>
+              {item.arabic}
+            </s.Arabic>
+            <s.PostFooter>
+              <s.More>
+              </s.More>
+              <s.Like>
+              </s.Like>
+              <s.Play
+                onClick={this.onPlay.bind(this, item.src)}>
+              </s.Play>
+            </s.PostFooter>
+            <s.Title>
+              {item.title}
+            </s.Title>
+
+          </s.Right>
+        </s.Post>
+      </div>
          )
     })
-
-     return hasil
+   return hasil
 
  }
-
+ // renderMessages() {
+ //     return this.props.messages.map((msg, index) => {
+ //       return(
+ //         <div className="item" key={index}>{msg.materi}</div>
+ //       )
+ //     })
+ //   }
 
   render() {
     const { loading, error, repos } = this.props;
@@ -132,50 +178,15 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
 
          <CenteredSection>
 
-           <s.LongDiv>
-               <InfiniteScroll
-                 items={this._renderMessages()}
-                 loadMore={this.loadMore.bind(this)}
-                 elementIsScrollable={false}
-                 loadingMore = {this.state.loadingMore}
-                 threshold= {100}
-               />
-           </s.LongDiv>
-          <s.Post>
-            <s.Left>
-              <s.Level>
-                a
-              </s.Level>
-
-            </s.Left>
-            <s.Right>
-              <s.Materi>
-                Mad
-              </s.Materi>
-              <s.Sub>
-                Bacaan panjang
-              </s.Sub>
-              <s.Arabic>
-                مَآ أَنزَلۡنَا
-              </s.Arabic>
-              <s.PostFooter>
-                <s.More>
-                </s.More>
-                <s.Like>
-                </s.Like>
-                <s.Play onClick={this.onPlay.bind(this)}>
-                </s.Play>
-              </s.PostFooter>
-              <s.Title>
-                Qs Thahaa [20] : 2
-              </s.Title>
-
-            </s.Right>
-          </s.Post>
+           <InfiniteScroll
+             items={this.renderMessages()}
+             loadMore={this.loadMore.bind(this)}
+             elementIsScrollable={false}
+             loadingMore = {this.state.loadingMore}
+             threshold= {220}
+           />
         </CenteredSection>
           <Section>
-
-
           </Section>
         </div>
       </article>

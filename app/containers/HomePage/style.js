@@ -143,10 +143,6 @@ const PostFooter = styled.div`
 const Player = styled.div`
   display: none;
 `;
-const LongDiv = styled.div`
-  ${''/* height: 1200px; */}
-  border: 1px solid black;
-  overflow: hidden;
-`;
-const s = { LongDiv, Player, Like, More, PostFooter, Sub, Materi, Level, Left, Right, Post, Header, Eja, Eja2, Arabic, Title, Play };
+
+const s = { Player, Like, More, PostFooter, Sub, Materi, Level, Left, Right, Post, Header, Eja, Eja2, Arabic, Title, Play };
 export default s;

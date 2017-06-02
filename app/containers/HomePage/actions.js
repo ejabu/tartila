@@ -37,14 +37,31 @@ export function fetchMessages(params) {
   return {
     type: "FETCH_MESSAGES",
     messages: [
-      'hi there',
-      'hi again',
-      'still here',
-      'hi there',
-      'hi again',
-      'still here',
-      'hi there',
-      'hi again',
+      {
+        'src' : "http://www.everyayah.com/data/Abdurrahmaan_As-Sudais_192kbps/001001.mp3",
+        'materi' : "Mad",
+        'sub' : "Bacaan panjang",
+        'arabic' : "مَآ أَنزَلۡنَا",
+        'title' : "Qs Thahaa [20] : 2",
+
+      },
+      {
+        'src' : "http://www.everyayah.com/data/Abdurrahmaan_As-Sudais_192kbps/001001.mp3",
+        'materi' : "Mad",
+        'sub' : "Bacaan panjang",
+        'arabic' : "مَآ أَنزَلۡنَا",
+        'title' : "Qs Thahaa [20] : 2",
+
+      },
+      {
+        'src' : "http://www.everyayah.com/data/Abdurrahmaan_As-Sudais_192kbps/001001.mp3",
+        'materi' : "Mad",
+        'sub' : "Bacaan panjang",
+        'arabic' : "مَآ أَنزَلۡنَا",
+        'title' : "Qs Thahaa [20] : 2",
+
+      },
+
 
     ]
   };
